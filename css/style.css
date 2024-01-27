@@ -101,6 +101,11 @@ main a {
     box-shadow: 0 2px 4px hsla(210, 50%, 50%, 0.5);
 }
 
+#intro a:hover,
+main a:hover {
+    background-color: var(--clr-active);
+}
+
 main>img {
     max-width: 100%;
 }
@@ -248,6 +253,7 @@ footer input {
 }
 
 footer button {
+    cursor: pointer;
     font-size: .825rem;
     line-height: 2rem;
     font-weight: 700;
@@ -259,6 +265,10 @@ footer button {
     margin-left: 1rem;
 }
 
+footer button:hover{
+    background-color: var(--clr-active);
+}
+
 .socials {
     display: flex;
     gap: 1rem;
@@ -266,6 +276,21 @@ footer button {
     margin-top: 3rem;
 }
 
+.socials i{
+    cursor: pointer;
+}
+
+.fa-square-facebook:hover{
+    color: lightblue;
+}
+
+.fa-square-instagram:hover{
+    color:hsl(321, 100%, 78%);
+}
+
+.fa-square-twitter:hover{
+    color:mediumaquamarine;
+}
 /* Media Queries */
 
 @media (max-width: 1260px) {
@@ -372,4 +397,84 @@ footer button {
         max-width: 90%;
     }
 
+}
+
+@media (max-width: 376px) {
+
+
+    header {
+        display: flex;
+        align-items: center;        
+        padding: 2rem 2rem;
+        margin-bottom: 10rem;
+    }
+
+    header img{
+        width: 35%;
+    }
+    header a {
+        width: 35%;
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--clr-primary);
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--clr-primary);
+        border-radius: 2rem;
+        box-shadow: 0 2px 4px hsla(210, 50%, 50%, 0.3);
+    }
+
+    #intro p {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    #sellingpoints h2 {
+        font-size: 1.6rem;
+        line-height: 4rem;
+        text-align: center;
+    }
+
+    #sellingpoints p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #sellingpoints article {
+        
+        padding: 0 2rem;
+    }
+
+    #finish h2 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer > div {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    footer p {
+        width: 100%;
+    }
+
+
+    footer input {
+        width: 100%;
+    }
+
+    footer button {
+        width: 50%;
+        padding: .5rem 0;
+    }
+
+    footer svg{
+        width: 50%;
+    }
 }
